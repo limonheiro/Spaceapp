@@ -51,12 +51,12 @@ function App() {
 
 
   const tagSelecionada = (evento) => {
-    setQuery(Number(evento.target.dataset.key) === 0 ? '' : 'tagId=' + evento.target.dataset.key)
+    setQuery(Number(evento.target.dataset.key) === 0 ? '' : '?tagId=' + evento.target.dataset.key)
   }
 
   const pesquisa = (evento) => {
     // console.log(evento.target.value)
-    setQuery('titulo_like=' + evento.target.value)
+    setQuery('?titulo_like=' + evento.target.value)
   }
 
   useEffect(() => {

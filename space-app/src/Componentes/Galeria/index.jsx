@@ -3,6 +3,7 @@ import Titulo from '../Titulo'
 import { Tags } from './Tags'
 import Image from './Image'
 import { Populares } from './Populares'
+import ListaFotos from '../ListaFotos'
 
 const GaleriaContainer = styled.div`
     display: flex;
@@ -14,13 +15,7 @@ const SecaoFluida = styled.div`
     flex-direction: column;
 `
 
-const ListaFotos = styled.ul`
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding: 0;
-    gap: 24px;
-`
+
 const Galeria = ({ fotos = [], aoFotoSolicitada, tagSelecionada }) => {
     return (
         <>

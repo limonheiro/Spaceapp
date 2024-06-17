@@ -1,8 +1,8 @@
 import styled from "styled-components"
 import Icon from "../Icon"
-import facebookSVG from '../../../public/imagens/sociais/facebook.svg'
-import XSVG from '../../../public/imagens/sociais/twitter.svg'
-import instagramSVG from '../../../public/imagens/sociais/instagram.svg'
+import facebookSVG from '/imagens/sociais/facebook.svg'
+import XSVG from '/imagens/sociais/twitter.svg'
+import instagramSVG from '/imagens/sociais/instagram.svg'
 
 const RodapeContainer = styled.footer`
     background: #04244F;
