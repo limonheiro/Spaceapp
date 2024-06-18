@@ -56,19 +56,29 @@ function App() {
 
   const pesquisa = (evento) => {
     // console.log(evento.target.value)
-    setQuery('?titulo_like=' + evento.target.value)
+    const query = '?titulo_like=' + evento.target.value
+    if (query.split('=')[1].length > 0) {
+      setQuery(query)
+    }else{
+      setQuery('')
+    }
   }
 
   useEffect(() => {
-    fetch('http://localhost:3000/fotos')
-      .then(res => res.json())
-      .then(data => setFotosGaleria(data))
+    setTimeout(() => {
+      fetch('http://localhost:3000/fotos')
+        .then(res => res.json())
+        .then(data => setFotosGaleria(data))
+    }, 1000);
+
   }, [])
 
   useEffect(() => {
     fetch('http://localhost:3000/fotos?' + query)
       .then(res => res.json())
       .then(data => setFotosGaleria(data))
+
+
   }, [query])
 
 
